@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
-import logoImg from "@assets/rize_elevators_logo_1768581424254.png";
+import logoImg from "@assets/ChatGPT_Image_Jan_16,_2026,_10_09_42_PM_1768581594627.png";
 
 export default function Footer() {
   return (
