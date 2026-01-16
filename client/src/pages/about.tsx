@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, Shield, Users, Target } from "lucide-react";
+import aboutImg from "@assets/generated_images/modern_office_lobby_with_glass_elevator.png";
 
 export default function About() {
   return (
@@ -35,11 +36,13 @@ export default function About() {
                </div>
             </div>
           </div>
-          <div className="bg-slate-200 h-[400px] rounded-2xl overflow-hidden relative">
-            {/* Placeholder for About Us Image - or re-use existing one */}
-             <div className="absolute inset-0 bg-gradient-to-br from-slate-300 to-slate-400 flex items-center justify-center">
-                <span className="text-slate-500 font-bold text-xl">About Us Image</span>
-             </div>
+          <div className="rounded-2xl overflow-hidden shadow-2xl relative">
+             <img 
+               src={aboutImg} 
+               alt="Modern Corporate Lobby" 
+               className="w-full h-[400px] object-cover"
+             />
+             <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
           </div>
         </div>
 
@@ -49,7 +52,7 @@ export default function About() {
             {
               title: "Our Mission",
               icon: Target,
-              desc: "To provide safe, efficient, and reliable vertical transportation solutions that enhance the quality of life for our customers."
+              desc: "To provide safe, efficiency, and reliable vertical transportation solutions that enhance the quality of life for our customers."
             },
             {
               title: "Our Vision",
