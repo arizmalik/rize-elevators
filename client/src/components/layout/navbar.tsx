@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ArrowUpRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -30,15 +30,25 @@ export default function Navbar() {
       className={cn(
         "fixed w-full z-50 transition-all duration-300",
         scrolled
-          ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm py-4"
+          ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg py-3"
           : "bg-transparent py-6"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/">
-          <span className="text-2xl font-bold font-display tracking-tighter flex items-center gap-2 text-primary cursor-pointer">
-            RIZE
-            <span className="text-foreground">ELEVATORS</span>
+          <span className="flex items-center gap-3 cursor-pointer group">
+            <div className="relative w-10 h-10 bg-primary rounded-lg flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent" />
+              <ArrowUpRight className="text-white w-6 h-6" />
+            </div>
+            <div className="flex flex-col leading-none">
+              <span className="text-xl font-black font-display tracking-tighter text-primary">
+                RIZE
+              </span>
+              <span className="text-[10px] font-bold tracking-[0.2em] text-foreground/70 uppercase">
+                Elevators
+              </span>
+            </div>
           </span>
         </Link>
 
@@ -48,10 +58,10 @@ export default function Navbar() {
             <Link key={link.name} href={link.href}>
               <span
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary cursor-pointer",
+                  "text-sm font-semibold tracking-wide transition-all hover:text-primary cursor-pointer relative py-2",
                   location === link.href
-                    ? "text-primary font-semibold"
-                    : "text-muted-foreground"
+                    ? "text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary"
+                    : "text-foreground/70"
                 )}
               >
                 {link.name}
@@ -59,7 +69,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link href="/contact">
-            <Button size="sm" className="gap-2 shadow-lg hover:shadow-xl transition-all cursor-pointer">
+            <Button size="sm" className="gap-2 shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all cursor-pointer font-bold px-6">
               <Phone className="h-4 w-4" /> Get a Quote
             </Button>
           </Link>
@@ -76,12 +86,15 @@ export default function Navbar() {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 border-b border-border shadow-lg animate-in slide-in-from-top-5">
-          <div className="flex flex-col p-4 gap-4">
+        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 border-b border-border shadow-2xl animate-in slide-in-from-top-5">
+          <div className="flex flex-col p-6 gap-4">
             {navLinks.map((link) => (
               <Link key={link.name} href={link.href}>
                 <span
-                  className="text-lg font-medium p-2 hover:bg-muted rounded-md transition-colors cursor-pointer block"
+                  className={cn(
+                    "text-lg font-bold p-3 rounded-xl transition-all cursor-pointer block",
+                    location === link.href ? "bg-primary/10 text-primary" : "hover:bg-muted"
+                  )}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -89,7 +102,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link href="/contact">
-              <Button className="w-full mt-2" onClick={() => setIsOpen(false)}>
+              <Button className="w-full mt-4 h-14 text-lg font-bold shadow-xl" onClick={() => setIsOpen(false)}>
                 Get a Quote
               </Button>
             </Link>
