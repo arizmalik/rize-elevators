@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import logoImg from "@assets/ChatGPT_Image_Jan_16,_2026,_10_09_42_PM_1768581594627.png";
+import logoImg from "@assets/rize_elevators_logo-removebg-preview_1768581799005.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,8 +31,8 @@ export default function Navbar() {
       className={cn(
         "fixed w-full z-50 transition-all duration-300",
         scrolled
-          ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg py-2"
-          : "bg-transparent py-4"
+          ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg py-1"
+          : "bg-transparent py-2"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
@@ -41,7 +41,7 @@ export default function Navbar() {
             <img 
               src={logoImg} 
               alt="Rize Elevators" 
-              className="h-12 md:h-16 w-auto object-contain mix-blend-multiply dark:brightness-200 dark:contrast-150"
+              className="h-14 md:h-20 w-auto object-contain brightness-0 dark:brightness-200 contrast-125 transition-transform group-hover:scale-105"
             />
           </span>
         </Link>
