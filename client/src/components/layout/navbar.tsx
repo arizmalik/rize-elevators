@@ -37,15 +37,21 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/">
           <span className="flex items-center gap-3 cursor-pointer group">
-            <div className="relative w-10 h-10 bg-primary rounded-lg flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105">
+            <div className="relative w-10 h-10 bg-primary rounded-lg flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105 shadow-md">
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent" />
               <ArrowUpRight className="text-white w-6 h-6" />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-xl font-black font-display tracking-tighter text-primary">
+              <span className={cn(
+                "text-xl font-black font-display tracking-tighter transition-colors duration-300",
+                scrolled ? "text-primary" : "text-white"
+              )}>
                 RIZE
               </span>
-              <span className="text-[10px] font-bold tracking-[0.2em] text-foreground/70 uppercase">
+              <span className={cn(
+                "text-[10px] font-bold tracking-[0.2em] uppercase transition-colors duration-300",
+                scrolled ? "text-foreground/70" : "text-white/80"
+              )}>
                 Elevators
               </span>
             </div>
@@ -58,10 +64,11 @@ export default function Navbar() {
             <Link key={link.name} href={link.href}>
               <span
                 className={cn(
-                  "text-sm font-semibold tracking-wide transition-all hover:text-primary cursor-pointer relative py-2",
-                  location === link.href
-                    ? "text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary"
-                    : "text-foreground/70"
+                  "text-sm font-bold tracking-wide transition-all cursor-pointer relative py-2",
+                  scrolled 
+                    ? (location === link.href ? "text-primary after:bg-primary" : "text-foreground/70 hover:text-primary")
+                    : (location === link.href ? "text-white after:bg-white" : "text-white/80 hover:text-white"),
+                  location === link.href && "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5"
                 )}
               >
                 {link.name}
@@ -69,7 +76,14 @@ export default function Navbar() {
             </Link>
           ))}
           <Link href="/contact">
-            <Button size="sm" className="gap-2 shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all cursor-pointer font-bold px-6">
+            <Button 
+              size="sm" 
+              variant={scrolled ? "default" : "secondary"}
+              className={cn(
+                "gap-2 shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer font-bold px-6",
+                !scrolled && "bg-white text-primary hover:bg-white/90"
+              )}
+            >
               <Phone className="h-4 w-4" /> Get a Quote
             </Button>
           </Link>
@@ -77,7 +91,10 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden p-2 text-foreground"
+          className={cn(
+            "md:hidden p-2 transition-colors duration-300",
+            scrolled ? "text-foreground" : "text-white"
+          )}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X /> : <Menu />}
