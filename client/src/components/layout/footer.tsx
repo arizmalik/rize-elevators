@@ -1,5 +1,6 @@
 import { Link } from "wouter";
-import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
+import logoImg from "@assets/rize_elevators_logo_1768581424254.png";
 
 export default function Footer() {
   return (
@@ -11,18 +12,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <Link href="/">
-              <span className="flex items-center gap-3 cursor-pointer group">
-                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">
-                  <ArrowUpRight className="text-white w-7 h-7" />
-                </div>
-                <div className="flex flex-col leading-none">
-                  <span className="text-2xl font-black font-display tracking-tighter text-white">
-                    RIZE
-                  </span>
-                  <span className="text-xs font-bold tracking-[0.2em] text-primary uppercase">
-                    Elevators
-                  </span>
-                </div>
+              <span className="flex items-center cursor-pointer group">
+                <img 
+                  src={logoImg} 
+                  alt="Rize Elevators" 
+                  className="h-16 w-auto object-contain brightness-0 invert"
+                />
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
