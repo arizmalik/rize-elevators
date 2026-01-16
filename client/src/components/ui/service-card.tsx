@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "wouter";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
@@ -10,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface ServiceCardProps {
   title: string;
@@ -86,13 +88,10 @@ export default function ServiceCard({ title, description, icon: Icon, className,
         )}
         <div className="mt-8 flex justify-end">
           <Link href="/contact">
-            <Button className="font-bold">Get a Quote for This Service</Button>
+            <Button className="font-bold cursor-pointer">Get a Quote for This Service</Button>
           </Link>
         </div>
       </DialogContent>
     </Dialog>
   );
 }
-
-// Internal Button component since it's used in the dialog
-import { Button } from "@/components/ui/button";
