@@ -4,7 +4,8 @@ import installationImg from "@assets/generated_images/elevator_installation_engi
 import maintenanceImg from "@assets/generated_images/elevator_maintenance_technician.png";
 import luxuryImg from "@assets/generated_images/luxury_elevator_interior.png";
 import modernizationImg from "@assets/generated_images/modernized_elevator_touch_panel.png";
-import repairImg from "@assets/generated_images/elevator_repair_technician_working.png";
+import repairImg from "@assets/generated_images/technician_at_elevator_control_panel.png";
+import residentialImg from "@assets/generated_images/modern_home_elevator_in_residence.png";
 
 export default function Services() {
   const services = [
@@ -18,7 +19,7 @@ export default function Services() {
       title: "Residential Elevators",
       desc: "Compact, quiet, and stylish lifts for apartments and private homes. Custom finishes to match your interior design.",
       icon: Home,
-      image: undefined
+      image: residentialImg
     },
     {
       title: "Installation Services",
