@@ -3,7 +3,7 @@ import { PenTool, ShieldCheck, TrendingUp, Home, Building2, Wrench } from "lucid
 import installationImg from "@assets/generated_images/elevator_installation_engineers.png";
 import maintenanceImg from "@assets/generated_images/elevator_maintenance_technician.png";
 import luxuryImg from "@assets/generated_images/luxury_elevator_interior.png";
-import modernizationImg from "@assets/generated_images/modernized_elevator_touch_panel.png";
+import modernizationImg from "@assets/generated_images/elevator_cop_touch_panel_interface.png";
 import repairImg from "@assets/generated_images/technician_at_elevator_control_panel.png";
 import residentialImg from "@assets/generated_images/modern_home_elevator_in_residence.png";
 
