@@ -1,0 +1,80 @@
+Here is a **professional, copy-paste ready prompt** you can use directly in **Replit AI / Replit Agent** to create your elevator company website.
+I’ve written it like a **real business brief**, not casual, so you get a clean, professional result.
+
+---
+
+## 🔹 Replit Website Creation Prompt (Professional)
+
+> Act as a **professional web developer and UI/UX designer**.
+>
+> Create a **modern, responsive, professional business website** for my elevator company named **“Rize Elevators”**.
+>
+> ### Company Profile
+>
+> * **Company Name:** Rize Elevators
+> * **Industry:** Elevator & Lift Solutions
+> * **Services:**
+>
+>   * Elevator Installation
+>   * Elevator Maintenance & AMC
+>   * Elevator Repair & Troubleshooting
+>   * Modernization & Upgradation
+>   * Residential, Commercial & Industrial Lifts
+> * **Target Customers:** Builders, Commercial buildings, Apartments, Hospitals, Hotels, Residential clients
+> * **Location:** India
+>
+> ### Website Requirements
+>
+> * Clean, **corporate and trustworthy design**
+> * Elevator-industry themed colors (dark blue / grey / black with accents)
+> * Fully **mobile responsive**
+> * Fast loading and SEO-friendly
+>
+> ### Pages to Include
+>
+> 1. **Home** – hero section with strong tagline like
+>    *“Rising Standards in Vertical Transportation”*
+> 2. **About Us** – company vision, mission, experience, safety focus
+> 3. **Services** – detailed service cards with icons
+> 4. **Why Choose Us** – safety, reliability, experienced engineers, quality parts
+> 5. **Projects / Solutions** – placeholder section for future projects
+> 6. **Contact Us** – contact form + address + phone + email (placeholders)
+>
+> ### Design & Content
+>
+> * Use **professional business language**
+> * Include elevator-related icons and images (placeholders allowed)
+> * Add call-to-action buttons like **“Get a Quote”**, **“Call Now”**
+> * Footer with company name, services, and copyright
+>
+> ### Tech Stack
+>
+> * Use **HTML, CSS, and JavaScript** (or React if preferred)
+> * Well-structured, clean, commented code
+> * Ready to deploy
+>
+> Deliver a **complete working website** with organized files and clear instructions to run it on Replit.
+
+---
+
+## 🔹 Optional (Add this if you want extra quality)
+
+```
+Include:
+- Smooth animations
+- Hover effects
+- Professional typography
+- Sticky navigation bar
+- WhatsApp contact button
+```
+
+---
+
+If you want, I can:
+
+* Rewrite this for **React / Next.js**
+* Create **ready-made website content text**
+* Design a **logo idea & color palette**
+* Customize it for **Rize Elevators + AMC focus**
+
+Just tell me 👍
