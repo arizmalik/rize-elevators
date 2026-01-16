@@ -1,6 +1,5 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { CheckCircle2, Shield, Users, Target } from "lucide-react";
-import aboutImg from "@assets/generated_images/elevator_installation_engineers.png";
 
 export default function About() {
   return (
@@ -23,26 +22,24 @@ export default function About() {
             <p className="text-muted-foreground leading-relaxed">
               Founded with a vision to revolutionize the vertical transportation industry in India, Rize Elevators has grown from a small service provider to a trusted name in the sector. 
               <br /><br />
-              With over 5 years of industry experience, our team of dedicated engineers and technicians understands the complexities of modern buildings. We don't just install lifts; we engineer experiences that are smooth, safe, and efficient.
+              With over 15 years of industry experience, our team of dedicated engineers and technicians understands the complexities of modern buildings. We don't just install lifts; we engineer experiences that are smooth, safe, and efficient.
             </p>
             <div className="grid grid-cols-2 gap-6 pt-4">
                <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                 <h3 className="font-bold text-3xl text-primary mb-1">5+</h3>
+                 <h3 className="font-bold text-3xl text-primary mb-1">15+</h3>
                  <p className="text-sm text-muted-foreground">Years Experience</p>
                </div>
                <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                 <h3 className="font-bold text-3xl text-primary mb-1">100+</h3>
+                 <h3 className="font-bold text-3xl text-primary mb-1">500+</h3>
                  <p className="text-sm text-muted-foreground">Projects Delivered</p>
                </div>
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-2xl relative h-[450px]">
-            <img 
-              src={aboutImg} 
-              alt="Our Team at Work" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
+          <div className="bg-slate-200 h-[400px] rounded-2xl overflow-hidden relative">
+            {/* Placeholder for About Us Image - or re-use existing one */}
+             <div className="absolute inset-0 bg-gradient-to-br from-slate-300 to-slate-400 flex items-center justify-center">
+                <span className="text-slate-500 font-bold text-xl">About Us Image</span>
+             </div>
           </div>
         </div>
 
