@@ -11,37 +11,37 @@ export default function Services() {
   const services = [
     {
       title: "Commercial Elevators",
-      desc: "High-speed, high-capacity elevators designed for office buildings, malls, and hotels. Optimized for traffic flow and energy efficiency.",
+      desc: "Our commercial elevator solutions are engineered for high-traffic environments such as corporate offices, shopping malls, and luxury hotels. We prioritize rapid transit times, superior ride quality, and advanced traffic management systems to ensure seamless floor-to-floor mobility for your visitors and employees.",
       icon: Building2,
       image: luxuryImg
     },
     {
       title: "Residential Elevators",
-      desc: "Compact, quiet, and stylish lifts for apartments and private homes. Custom finishes to match your interior design.",
+      desc: "Elevate your living experience with our bespoke home elevators. Designed to integrate seamlessly with your home's architecture, our residential lifts offer quiet operation, space-saving designs, and customizable luxury finishes. Perfect for multi-story villas, penthouses, and high-end apartment complexes.",
       icon: Home,
       image: residentialImg
     },
     {
       title: "Installation Services",
-      desc: "End-to-end installation managed by certified engineers. We ensure timely completion and strict adherence to safety codes.",
+      desc: "We provide end-to-end installation services managed by senior project engineers. Our process includes rigorous site surveys, precision shaft preparation, and a commitment to completing every project on schedule while strictly adhering to international safety standards and local building codes.",
       icon: PenTool,
       image: installationImg
     },
     {
       title: "Maintenance & AMC",
-      desc: "Comprehensive Annual Maintenance Contracts. Regular inspections, lubrication, and adjustments to prevent breakdowns.",
+      desc: "Protect your investment with our comprehensive Annual Maintenance Contracts (AMC). Our preventive maintenance program includes 24/7 technical support, regular lubrication, critical component testing, and proactive part replacement to maximize uptime and extend the lifespan of your vertical transportation assets.",
       icon: ShieldCheck,
       image: maintenanceImg
     },
     {
       title: "Modernization",
-      desc: "Revamp your old elevators. We upgrade control systems, cabin aesthetics, and door operators to make them feel brand new.",
+      desc: "Transform your legacy elevators with our modernization packages. By upgrading aging control systems, installing energy-efficient drive units, and refreshing cabin interiors with touch-sensitive COP panels, we significantly improve safety, reliability, and the overall value of your building.",
       icon: TrendingUp,
       image: modernizationImg
     },
     {
       title: "Repair & Troubleshooting",
-      desc: "Fast response breakdown service. Our expert technicians can diagnose and fix issues with any elevator brand.",
+      desc: "Our rapid-response breakdown team is equipped with the latest diagnostic tools to resolve technical issues swiftly. We specialize in troubleshooting complex electronic and mechanical failures across all major elevator brands, ensuring your system is back in operation with minimal disruption.",
       icon: Wrench,
       image: repairImg
     }
@@ -53,7 +53,7 @@ export default function Services() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-4xl md:text-5xl font-bold font-display mb-6">Our Services</h1>
           <p className="text-lg text-muted-foreground">
-            From installation to maintenance, we offer a complete range of vertical transportation solutions customized for your building.
+            From precision installation to 24/7 technical support, we offer a complete range of vertical transportation solutions customized for every building type across India.
           </p>
         </div>
 
