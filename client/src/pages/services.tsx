@@ -3,6 +3,8 @@ import { PenTool, ShieldCheck, TrendingUp, Home, Building2, Wrench } from "lucid
 import installationImg from "@assets/generated_images/elevator_installation_engineers.png";
 import maintenanceImg from "@assets/generated_images/elevator_maintenance_technician.png";
 import luxuryImg from "@assets/generated_images/luxury_elevator_interior.png";
+import modernizationImg from "@assets/generated_images/modernized_elevator_touch_panel.png";
+import repairImg from "@assets/generated_images/elevator_repair_technician_working.png";
 
 export default function Services() {
   const services = [
@@ -34,13 +36,13 @@ export default function Services() {
       title: "Modernization",
       desc: "Revamp your old elevators. We upgrade control systems, cabin aesthetics, and door operators to make them feel brand new.",
       icon: TrendingUp,
-      image: undefined
+      image: modernizationImg
     },
     {
       title: "Repair & Troubleshooting",
       desc: "Fast response breakdown service. Our expert technicians can diagnose and fix issues with any elevator brand.",
       icon: Wrench,
-      image: undefined
+      image: repairImg
     }
   ];
 
