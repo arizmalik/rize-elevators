@@ -1,11 +1,12 @@
 import ServiceCard from "@/components/ui/service-card";
-import { PenTool, ShieldCheck, TrendingUp, Home, Building2, Wrench } from "lucide-react";
+import { PenTool, ShieldCheck, TrendingUp, Home, Building2, Wrench, Package } from "lucide-react";
 import installationImg from "@assets/generated_images/elevator_installation_engineers.png";
 import maintenanceImg from "@assets/generated_images/elevator_maintenance_technician.png";
 import luxuryImg from "@assets/generated_images/luxury_elevator_interior.png";
 import modernizationImg from "@assets/generated_images/elevator_cop_touch_panel_interface.png";
 import repairImg from "@assets/generated_images/technician_at_elevator_control_panel.png";
 import residentialImg from "@assets/generated_images/modern_home_elevator_in_residence.png";
+import freightImg from "@assets/generated_images/industrial_heavy-duty_freight_elevator_interior.png";
 
 export default function Services() {
   const services = [
@@ -35,6 +36,20 @@ export default function Services() {
         "Battery backup for power failures",
         "Single-phase power compatibility",
         "Compact machine-room-less (MRL) design"
+      ]
+    },
+    {
+      title: "Freight Elevators",
+      desc: "Built for the most demanding industrial environments, our freight elevators are designed to transport heavy loads with maximum durability and safety. Ideal for warehouses, factories, and logistics centers, these lifts feature rugged construction and high weight capacities to streamline your material handling operations.",
+      icon: Package,
+      image: freightImg,
+      details: [
+        "High load capacity (up to 5,000kg+)",
+        "Reinforced stainless steel checkered flooring",
+        "Heavy-duty vertical or horizontal sliding doors",
+        "Rugged wall protection bumpers",
+        "Precision leveling for forklift loading",
+        "Explosion-proof options for chemical plants"
       ]
     },
     {
