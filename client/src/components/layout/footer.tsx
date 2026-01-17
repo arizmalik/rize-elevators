@@ -48,15 +48,41 @@ export default function Footer() {
               <span className="absolute -bottom-2 left-0 w-8 h-1 bg-primary rounded-full" />
             </h4>
             <ul className="space-y-4">
-              {["Home", "About Us", "Services", "Projects", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link href={item === "Home" ? "/" : `/${item.toLowerCase().replace(" ", "-")}`}>
-                    <span className="text-slate-400 hover:text-primary hover:translate-x-1 transition-all text-sm cursor-pointer inline-block">
-                      {item}
-                    </span>
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/">
+                  <span className="text-slate-400 hover:text-primary hover:translate-x-1 transition-all text-sm cursor-pointer inline-block">
+                    Home
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/about">
+                  <span className="text-slate-400 hover:text-primary hover:translate-x-1 transition-all text-sm cursor-pointer inline-block">
+                    About Us
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services">
+                  <span className="text-slate-400 hover:text-primary hover:translate-x-1 transition-all text-sm cursor-pointer inline-block">
+                    Services
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects">
+                  <span className="text-slate-400 hover:text-primary hover:translate-x-1 transition-all text-sm cursor-pointer inline-block">
+                    Projects
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact">
+                  <span className="text-slate-400 hover:text-primary hover:translate-x-1 transition-all text-sm cursor-pointer inline-block">
+                    Contact
+                  </span>
+                </Link>
+              </li>
             </ul>
           </div>
 
