@@ -10,10 +10,12 @@ import Contact from "@/pages/contact";
 import Projects from "@/pages/projects";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import ScrollToTop from "@/components/layout/scroll-to-top";
 
 function Router() {
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       <Navbar />
       <main className="flex-grow">
         <Switch>
