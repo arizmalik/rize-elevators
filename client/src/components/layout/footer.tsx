@@ -162,8 +162,18 @@ export default function Footer() {
             © {new Date().getFullYear()} Rize Elevators. Vertical Standards Defined.
           </p>
           <div className="flex gap-8 text-xs font-bold text-slate-500 uppercase tracking-widest">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            <div 
+              onClick={() => handleNavClick("/privacy-policy")} 
+              className="hover:text-primary transition-colors cursor-pointer"
+            >
+              Privacy Policy
+            </div>
+            <div 
+              onClick={() => handleNavClick("/terms-of-service")} 
+              className="hover:text-primary transition-colors cursor-pointer"
+            >
+              Terms of Service
+            </div>
           </div>
         </div>
       </div>
