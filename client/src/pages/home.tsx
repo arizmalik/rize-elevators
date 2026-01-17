@@ -9,22 +9,26 @@ import maintenanceImg from "@assets/generated_images/elevator_maintenance_techni
 import luxuryImg from "@assets/generated_images/luxury_elevator_interior.png";
 
 export default function Home() {
-  const fadeIn = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
-
   return (
     <div className="w-full">
       {/* Hero Section */}
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-        {/* Background Image with Overlay */}
+        {/* Background Image with Slow Zoom & Pan Animation */}
         <div className="absolute inset-0 z-0">
-          <img
+          <motion.img
             src={elevatorHero}
             alt="Modern Elevator"
             className="w-full h-full object-cover"
+            animate={{
+              scale: [1, 1.1, 1],
+              x: [0, -20, 0],
+              y: [0, -10, 0],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+            }}
           />
           <div className="absolute inset-0 bg-slate-900/60 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
