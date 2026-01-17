@@ -40,7 +40,7 @@ export default function TermsOfService() {
 
             <section>
               <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">6. Governing Law</h2>
-              <p>These terms shall be governed by and construed in accordance with the laws of India. Any disputes arising under these terms shall be subject to the exclusive jurisdiction of the courts in Mumbai.</p>
+              <p>These terms shall be governed by and construed in accordance with the laws of India. Any disputes arising under these terms shall be subject to the exclusive jurisdiction of the courts in Kanpur.</p>
             </section>
           </div>
         </motion.div>
