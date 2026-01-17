@@ -71,7 +71,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Phone</h4>
-                    <p className="text-muted-foreground">+91 98765 43210</p>
+                    <p className="text-muted-foreground">+91 70525 49235</p>
                     <p className="text-sm text-muted-foreground">Mon-Sat, 9am - 7pm</p>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ export default function Contact() {
                     <Clock className="h-5 w-5 text-primary" /> Emergency Support
                 </h4>
                 <p className="text-muted-foreground">
-                    For elevator breakdowns or emergencies, our support team is available 24/7 at <span className="font-bold text-primary">+91 98765 43210</span>.
+                    For elevator breakdowns or emergencies, our support team is available 24/7 at <span className="font-bold text-primary">+91 70525 49235</span>.
                 </p>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function Contact() {
                         <FormItem>
                         <FormLabel>Phone Number</FormLabel>
                         <FormControl>
-                            <Input placeholder="+91 98765 43210" {...field} />
+                            <Input placeholder="+91 70525 49235" {...field} />
                         </FormControl>
                         <FormMessage />
                         </FormItem>
