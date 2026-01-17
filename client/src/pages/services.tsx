@@ -1,5 +1,5 @@
 import ServiceCard from "@/components/ui/service-card";
-import { PenTool, ShieldCheck, TrendingUp, Home, Building2, Wrench, Package } from "lucide-react";
+import { PenTool, ShieldCheck, TrendingUp, Home, Building2, Wrench, Package, Droplets } from "lucide-react";
 import installationImg from "@assets/generated_images/elevator_installation_engineers.png";
 import maintenanceImg from "@assets/generated_images/elevator_maintenance_technician.png";
 import luxuryImg from "@assets/generated_images/luxury_elevator_interior.png";
@@ -7,6 +7,7 @@ import modernizationImg from "@assets/generated_images/elevator_cop_touch_panel_
 import repairImg from "@assets/generated_images/technician_at_elevator_control_panel.png";
 import residentialImg from "@assets/generated_images/modern_home_elevator_in_residence.png";
 import freightImg from "@assets/generated_images/industrial_heavy-duty_freight_elevator_interior.png";
+import hydraulicImg from "@assets/generated_images/modern_hydraulic_elevator_machinery_and_piston_system.png";
 
 export default function Services() {
   const services = [
@@ -50,6 +51,20 @@ export default function Services() {
         "Rugged wall protection bumpers",
         "Precision leveling for forklift loading",
         "Explosion-proof options for chemical plants"
+      ]
+    },
+    {
+      title: "Hydraulic Elevators",
+      desc: "Ideal for low to medium-rise buildings, our hydraulic elevators offer smooth, quiet performance with a focus on simplicity and reliability. These systems utilize advanced fluid dynamics to provide high lifting power with minimal structural impact on your building.",
+      icon: Droplets,
+      image: hydraulicImg,
+      details: [
+        "Smooth start and stop transitions",
+        "No overhead machine room required",
+        "Highly cost-effective for 2-5 floors",
+        "Exceptional reliability and ease of maintenance",
+        "Advanced leak-prevention technology",
+        "Compact power unit designs"
       ]
     },
     {
