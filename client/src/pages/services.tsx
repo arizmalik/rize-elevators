@@ -3,11 +3,11 @@ import { PenTool, ShieldCheck, TrendingUp, Home, Building2, Wrench, Package, Dro
 import installationImg from "@assets/generated_images/elevator_installation_engineers.png";
 import maintenanceImg from "@assets/generated_images/elevator_maintenance_technician.png";
 import luxuryImg from "@assets/generated_images/luxury_elevator_interior.png";
-import modernizationImg from "@assets/generated_images/modern_stylish_luxury_elevator_cabin_interior_with_ambient_lighting.png";
+import modernizationImg from "@assets/generated_images/elevator_cop_touch_panel_interface.png";
 import repairImg from "@assets/generated_images/technician_at_elevator_control_panel.png";
 import residentialImg from "@assets/generated_images/modern_home_elevator_in_residence.png";
 import freightImg from "@assets/generated_images/industrial_heavy-duty_freight_elevator_interior.png";
-import hydraulicImg from "@assets/generated_images/modern_hydraulic_elevator_cutaway_diagram.png";
+import hydraulicImg from "@assets/generated_images/modern_hydraulic_home_elevator_interior_in_a_residence.png";
 
 export default function Services() {
   const services = [
