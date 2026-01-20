@@ -13,9 +13,9 @@ export default function Projects() {
     { 
       name: "Sapphire Heights", 
       type: "Residential", 
-      location: "Kanpur", 
+      location: "Lucknow", 
       floors: "6 Floors",
-      status: "Completed",
+      status: "Ongoing",
       image: resBuilding1,
       details: "A premium 6-story residential project featuring our smooth traction elevators with bespoke cabin interiors and touch COP panels."
     },
@@ -83,7 +83,7 @@ export default function Projects() {
             transition={{ delay: 0.1 }}
             className="text-lg text-muted-foreground"
           >
-             A showcase of our specialized installations for 4 to 8-story mid-rise buildings, tailored for modern Indian urban architecture.
+             A showcase of our specialized installations for mid-rise buildings, tailored for modern Indian urban architecture.
           </motion.p>
         </div>
 
