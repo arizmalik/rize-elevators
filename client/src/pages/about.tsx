@@ -23,15 +23,15 @@ export default function About() {
             <p className="text-muted-foreground leading-relaxed">
               Founded with a vision to revolutionize the vertical transportation industry in India, Rize Elevators has grown from a small service provider to a trusted name in the sector. 
               <br /><br />
-              With over 15 years of industry experience, our team of dedicated engineers and technicians understands the complexities of modern buildings. We don't just install lifts; we engineer experiences that are smooth, safe, and efficient.
+              With over 10 years of industry experience, our team of dedicated engineers and technicians understands the complexities of modern buildings. We don't just install lifts; we engineer experiences that are smooth, safe, and efficient.
             </p>
             <div className="grid grid-cols-2 gap-6 pt-4">
                <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                 <h3 className="font-bold text-3xl text-primary mb-1">15+</h3>
+                 <h3 className="font-bold text-3xl text-primary mb-1">10+</h3>
                  <p className="text-sm text-muted-foreground">Years Experience</p>
                </div>
                <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                 <h3 className="font-bold text-3xl text-primary mb-1">500+</h3>
+                 <h3 className="font-bold text-3xl text-primary mb-1">100+</h3>
                  <p className="text-sm text-muted-foreground">Projects Delivered</p>
                </div>
             </div>

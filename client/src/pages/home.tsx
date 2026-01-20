@@ -76,8 +76,8 @@ export default function Home() {
       <section className="py-12 bg-white dark:bg-slate-900 relative z-20 -mt-10 mx-4 md:mx-auto max-w-6xl rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800">
         <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100 dark:divide-slate-800">
           {[
-            { label: "Years Experience", value: "15+", icon: Clock },
-            { label: "Projects Completed", value: "500+", icon: CheckCircle2 },
+            { label: "Years Experience", value: "10+", icon: Clock },
+            { label: "Projects Completed", value: "100+", icon: CheckCircle2 },
             { label: "Happy Clients", value: "100%", icon: Users },
             { label: "Safety Rating", value: "A+", icon: ShieldCheck },
           ].map((stat, i) => (
