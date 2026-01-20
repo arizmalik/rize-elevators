@@ -4,11 +4,14 @@ import { motion } from "framer-motion";
 import resBuilding1 from "@assets/generated_images/modern_indian_6-story_residential_apartment_building.png";
 import commComplex1 from "@assets/generated_images/elegant_5-story_commercial_complex_in_india.png";
 import luxBuilding1 from "@assets/generated_images/modern_8-story_luxury_apartment_in_india.png";
+import boutiqueHotel from "@assets/generated_images/modern_indian_4-story_boutique_hotel_architecture.png";
+import corporateOffice from "@assets/generated_images/sleek_7-story_indian_corporate_office_building.png";
+import educationalInst from "@assets/generated_images/contemporary_5-story_indian_educational_institution_building.png";
 
 export default function Projects() {
   const projects = [
     { 
-      name: "Rize Residences", 
+      name: "Sapphire Heights", 
       type: "Residential", 
       location: "Kanpur", 
       floors: "6 Floors",
@@ -26,13 +29,13 @@ export default function Projects() {
       details: "State-of-the-art 5-story commercial complex equipped with high-speed glass elevators for a premium visitor experience."
     },
     { 
-      name: "Grand Heights", 
-      type: "Luxury Apartments", 
+      name: "Varanasi Heritage Hotel", 
+      type: "Boutique Hotel", 
       location: "Varanasi", 
-      floors: "8 Floors",
+      floors: "4 Floors",
       status: "Completed",
-      image: luxBuilding1,
-      details: "A sophisticated 8-story luxury apartment building featuring our energy-efficient MRL elevators and 24/7 remote monitoring systems."
+      image: boutiqueHotel,
+      details: "Elegant 4-story boutique hotel featuring our ultra-quiet hydraulic passenger lifts with gold-tinted stainless steel finishes."
     },
     { 
       name: "Sunrise Apartments", 
@@ -40,16 +43,16 @@ export default function Projects() {
       location: "Kanpur", 
       floors: "4 Floors",
       status: "Ongoing",
-      image: resBuilding1, // Re-using for mockup purposes
+      image: educationalInst,
       details: "Ongoing installation of our quiet-operation home elevators for this modern 4-story residential development."
     },
     { 
-      name: "Tech Square", 
+      name: "Global Tech Park", 
       type: "Office Complex", 
       location: "Agra", 
       floors: "7 Floors",
       status: "Completed",
-      image: commComplex1, // Re-using for mockup purposes
+      image: corporateOffice,
       details: "Modern 7-story office space with high-traffic commercial elevators featuring advanced destination control systems."
     },
     { 
@@ -58,7 +61,7 @@ export default function Projects() {
       location: "Kanpur", 
       floors: "6 Floors",
       status: "Ongoing",
-      image: luxBuilding1, // Re-using for mockup purposes
+      image: luxBuilding1,
       details: "Bespoke 6-story project featuring our signature designer cabins and ultra-smooth ride technology."
     }
   ];
