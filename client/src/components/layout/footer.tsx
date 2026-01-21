@@ -26,11 +26,11 @@ export default function Footer() {
               onClick={() => handleNavClick("/")}
               className="flex items-center gap-3 cursor-pointer group"
             >
-              <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-white/5 transition-transform group-hover:scale-110 border border-slate-800 p-1">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-white/5 transition-transform group-hover:scale-110 border border-slate-800 flex-shrink-0">
                 <img 
                   src={logoImg} 
                   alt="Rize Elevators Logo" 
-                  className="w-full h-full object-contain"
+                  className="w-[85%] h-[85%] object-contain"
                 />
               </div>
               <div className="flex flex-col leading-tight">

@@ -43,11 +43,11 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/">
           <span className="flex items-center gap-3 cursor-pointer group">
-            <div className="relative w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105 shadow-sm border border-slate-100">
+            <div className="relative w-10 h-10 md:w-12 md:h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105 shadow-sm border border-slate-100 flex-shrink-0">
               <img 
                 src={logoImg} 
                 alt="Rize Elevators Logo" 
-                className="w-full h-full object-contain p-1"
+                className="w-[85%] h-[85%] object-contain"
               />
             </div>
             <div className="flex flex-col leading-tight">
