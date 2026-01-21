@@ -30,11 +30,14 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
+  const isHomePage = location === "/";
+  const showBackground = scrolled || !isHomePage;
+
   return (
     <nav
       className={cn(
         "fixed w-full z-50 transition-all duration-300",
-        scrolled
+        showBackground
           ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg py-3"
           : "bg-transparent py-6"
       )}
@@ -49,13 +52,13 @@ export default function Navbar() {
             <div className="flex flex-col leading-none">
               <span className={cn(
                 "text-xl font-black font-display tracking-tighter transition-colors duration-300",
-                scrolled ? "text-primary" : "text-white"
+                showBackground ? "text-primary" : "text-white"
               )}>
                 RIZE
               </span>
               <span className={cn(
                 "text-[10px] font-bold tracking-[0.2em] uppercase transition-colors duration-300",
-                scrolled ? "text-foreground/70" : "text-white/80"
+                showBackground ? "text-foreground/70" : "text-white/80"
               )}>
                 Elevators
               </span>
@@ -71,7 +74,7 @@ export default function Navbar() {
               onClick={() => handleNavClick(link.href)}
               className={cn(
                 "text-sm font-bold tracking-wide transition-all cursor-pointer relative py-2",
-                scrolled 
+                showBackground 
                   ? (location === link.href ? "text-primary after:bg-primary" : "text-foreground/70 hover:text-primary")
                   : (location === link.href ? "text-white after:bg-white" : "text-white/80 hover:text-white"),
                 location === link.href && "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5"
@@ -82,11 +85,11 @@ export default function Navbar() {
           ))}
           <Button 
             size="sm" 
-            variant={scrolled ? "default" : "secondary"}
+            variant={showBackground ? "default" : "secondary"}
             onClick={() => handleNavClick("/contact")}
             className={cn(
               "gap-2 shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer font-bold px-6",
-              !scrolled && "bg-white text-primary hover:bg-white/90"
+              !showBackground && "bg-white text-primary hover:bg-white/90"
             )}
           >
             <Phone className="h-4 w-4" /> Get a Quote
@@ -97,7 +100,7 @@ export default function Navbar() {
         <button
           className={cn(
             "md:hidden p-2 transition-colors duration-300",
-            scrolled ? "text-foreground" : "text-white"
+            showBackground ? "text-foreground" : "text-white"
           )}
           onClick={() => setIsOpen(!isOpen)}
         >
