@@ -7,7 +7,7 @@ import modernizationImg from "@assets/generated_images/modern_stylish_luxury_ele
 import repairImg from "@assets/generated_images/technician_at_elevator_control_panel.png";
 import residentialImg from "@assets/generated_images/modern_home_elevator_in_residence.png";
 import freightImg from "@assets/generated_images/industrial_heavy-duty_freight_elevator_interior.png";
-import hydraulicImg from "@assets/generated_images/simple_cuboidal_hydraulic_oil_tank_unit.png";
+import hydraulicImg from "@assets/generated_images/modern_hydraulic_home_elevator_interior_in_a_residence.png";
 
 export default function Services() {
   const services = [
