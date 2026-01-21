@@ -1,9 +1,8 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ArrowUpRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import logoImg from "@assets/generated_images/modern_minimalist_rize_elevators_logo_on_transparent_background.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,15 +41,25 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/">
-          <span className="flex items-center cursor-pointer group">
-            <img 
-              src={logoImg} 
-              alt="Rize Elevators" 
-              className={cn(
-                "h-12 md:h-14 w-auto transition-all duration-300",
-                !scrolled && "brightness-0 invert"
-              )}
-            />
+          <span className="flex items-center gap-3 cursor-pointer group">
+            <div className="relative w-10 h-10 bg-primary rounded-lg flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105 shadow-md">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent" />
+              <ArrowUpRight className="text-white w-6 h-6" />
+            </div>
+            <div className="flex flex-col leading-none">
+              <span className={cn(
+                "text-xl font-black font-display tracking-tighter transition-colors duration-300",
+                scrolled ? "text-primary" : "text-white"
+              )}>
+                RIZE
+              </span>
+              <span className={cn(
+                "text-[10px] font-bold tracking-[0.2em] uppercase transition-colors duration-300",
+                scrolled ? "text-foreground/70" : "text-white/80"
+              )}>
+                Elevators
+              </span>
+            </div>
           </span>
         </Link>
 

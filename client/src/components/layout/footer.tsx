@@ -1,6 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
-import logoImg from "@assets/generated_images/modern_minimalist_rize_elevators_logo_on_transparent_background.png";
+import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   const [, setLocation] = useLocation();
@@ -24,13 +23,19 @@ export default function Footer() {
           <div className="space-y-6">
             <div 
               onClick={() => handleNavClick("/")}
-              className="flex items-center cursor-pointer group"
+              className="flex items-center gap-3 cursor-pointer group"
             >
-              <img 
-                src={logoImg} 
-                alt="Rize Elevators" 
-                className="h-16 w-auto brightness-0 invert" 
-              />
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">
+                <ArrowUpRight className="text-white w-7 h-7" />
+              </div>
+              <div className="flex flex-col leading-none">
+                <span className="text-2xl font-black font-display tracking-tighter text-white">
+                  RIZE
+                </span>
+                <span className="text-xs font-bold tracking-[0.2em] text-primary uppercase">
+                  Elevators
+                </span>
+              </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
               Redefining vertical mobility across India with cutting-edge technology and an uncompromising commitment to passenger safety.
