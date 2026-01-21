@@ -1,5 +1,6 @@
 import { Link, useLocation } from "wouter";
-import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail, ArrowUp } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
+import logoImg from "@assets/generated_images/professional_corporate_logo_for_rize_elevators.png";
 
 export default function Footer() {
   const [, setLocation] = useLocation();
@@ -25,10 +26,14 @@ export default function Footer() {
               onClick={() => handleNavClick("/")}
               className="flex items-center gap-3 cursor-pointer group"
             >
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">
-                <ArrowUp className="text-white w-7 h-7" />
+              <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-white/5 transition-transform group-hover:scale-110 border border-slate-800 p-1">
+                <img 
+                  src={logoImg} 
+                  alt="Rize Elevators Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <div className="flex flex-col leading-none">
+              <div className="flex flex-col leading-tight">
                 <span className="text-2xl font-black font-display tracking-tighter text-white">
                   RIZE
                 </span>

@@ -1,8 +1,9 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, ArrowUp } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import logoImg from "@assets/generated_images/professional_corporate_logo_for_rize_elevators.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,20 +34,23 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed w-full z-50 transition-all duration-300",
+        "fixed w-full z-50 transition-all duration-300 border-b",
         scrolled
-          ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg py-3"
-          : "bg-transparent py-6"
+          ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg py-2 border-slate-200 dark:border-slate-800"
+          : "bg-transparent py-4 border-transparent"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/">
           <span className="flex items-center gap-3 cursor-pointer group">
-            <div className="relative w-10 h-10 bg-primary rounded-lg flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105 shadow-md">
-              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent" />
-              <ArrowUp className="text-white w-6 h-6" />
+            <div className="relative w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105 shadow-sm border border-slate-100">
+              <img 
+                src={logoImg} 
+                alt="Rize Elevators Logo" 
+                className="w-full h-full object-contain p-1"
+              />
             </div>
-            <div className="flex flex-col leading-none">
+            <div className="flex flex-col leading-tight">
               <span className={cn(
                 "text-xl font-black font-display tracking-tighter transition-colors duration-300",
                 scrolled ? "text-primary" : "text-white"
