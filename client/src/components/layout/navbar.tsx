@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, ArrowUpRight } from "lucide-react";
+import { Menu, X, Phone, ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -44,7 +44,7 @@ export default function Navbar() {
           <span className="flex items-center gap-3 cursor-pointer group">
             <div className="relative w-10 h-10 bg-primary rounded-lg flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105 shadow-md">
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent" />
-              <ArrowUpRight className="text-white w-6 h-6" />
+              <ArrowUp className="text-white w-6 h-6" />
             </div>
             <div className="flex flex-col leading-none">
               <span className={cn(

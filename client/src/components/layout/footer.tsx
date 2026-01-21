@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail, ArrowUpRight } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail, ArrowUp } from "lucide-react";
 
 export default function Footer() {
   const [, setLocation] = useLocation();
@@ -26,7 +26,7 @@ export default function Footer() {
               className="flex items-center gap-3 cursor-pointer group"
             >
               <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">
-                <ArrowUpRight className="text-white w-7 h-7" />
+                <ArrowUp className="text-white w-7 h-7" />
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-2xl font-black font-display tracking-tighter text-white">
