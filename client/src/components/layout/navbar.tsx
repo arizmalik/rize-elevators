@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import logoImg from "@assets/generated_images/official_rize_elevators_logo_on_transparent_background.png";
+import logoImg from "@assets/generated_images/pure_vector_logo_rize_elevators_isolated_on_transparency.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
-import logoImg from "@assets/generated_images/official_rize_elevators_logo_on_transparent_background.png";
+import logoImg from "@assets/generated_images/pure_vector_logo_rize_elevators_isolated_on_transparency.png";
 
 export default function Footer() {
   const [, setLocation] = useLocation();
