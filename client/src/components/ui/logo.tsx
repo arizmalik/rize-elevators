@@ -27,15 +27,15 @@ export default function Logo({ className, scrolled, isFooter }: LogoProps) {
             className={cn(!isFooter && scrolled && "text-primary")}
           />
           
-          {/* Transparent cutout/border area with curved edges for motion effect */}
+          {/* Transparent cutout/border area with flared/curved bottom for motion effect */}
           <path 
-            d="M45 85C42 70 42 60 45 45L30 45C40 35 45 25 55 15C65 25 70 35 80 45L65 45C68 60 68 70 65 85H45Z" 
+            d="M38 85C42 75 42 60 45 45L30 45C40 35 45 25 55 15C65 25 70 35 80 45L65 45C68 60 68 75 72 85H38Z" 
             fill={isFooter || !scrolled ? "#0f172a" : "white"}
           />
           
-          {/* Inner arrow with subtle outward curve for moving effect */}
+          {/* Inner arrow with outward bend at the bottom/foot for flared motion effect */}
           <path 
-            d="M50 80C48 70 48 60 50 48L38 48C45 40 50 32 55 25C60 32 65 40 72 48L60 48C62 60 62 70 60 80H50Z" 
+            d="M44 80C48 72 48 60 50 48L38 48C45 40 50 32 55 25C60 32 65 40 72 48L60 48C62 60 62 72 66 80H44Z" 
             fill="#94a3b8"
           />
         </svg>
