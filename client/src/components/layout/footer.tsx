@@ -1,8 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail, ArrowUp } from "lucide-react";
 
-import rizeLogo from "@assets/RIZE_logo_with_upward_arrow_design_1769614051292.png";
-
 export default function Footer() {
   const [, setLocation] = useLocation();
 
@@ -27,11 +25,17 @@ export default function Footer() {
               onClick={() => handleNavClick("/")}
               className="flex items-center gap-3 cursor-pointer group"
             >
-              <img 
-                src={rizeLogo} 
-                alt="RIZE Elevators" 
-                className="h-14 w-auto brightness-0 invert transition-transform group-hover:scale-110" 
-              />
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">
+                <ArrowUp className="text-white w-7 h-7" />
+              </div>
+              <div className="flex flex-col leading-none">
+                <span className="text-2xl font-black font-display tracking-tighter text-white">
+                  RIZE
+                </span>
+                <span className="text-xs font-bold tracking-[0.2em] text-primary uppercase">
+                  Elevators
+                </span>
+              </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
               Redefining vertical mobility across India with cutting-edge technology and an uncompromising commitment to passenger safety.
