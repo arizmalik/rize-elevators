@@ -1,5 +1,6 @@
 import { Link, useLocation } from "wouter";
-import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail, ArrowUp } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
+import Logo from "@/components/ui/logo";
 
 export default function Footer() {
   const [, setLocation] = useLocation();
@@ -21,21 +22,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="space-y-6">
-            <div 
-              onClick={() => handleNavClick("/")}
-              className="flex items-center gap-3 cursor-pointer group"
-            >
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">
-                <ArrowUp className="text-white w-7 h-7" />
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="text-2xl font-black font-display tracking-tighter text-white">
-                  RIZE
-                </span>
-                <span className="text-xs font-bold tracking-[0.2em] text-primary uppercase">
-                  Elevators
-                </span>
-              </div>
+            <div onClick={() => handleNavClick("/")}>
+              <Logo isFooter />
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
               Redefining vertical mobility across India with cutting-edge technology and an uncompromising commitment to passenger safety.
