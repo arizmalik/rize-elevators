@@ -8,10 +8,10 @@ interface LogoProps {
 
 export default function Logo({ className, scrolled, isFooter }: LogoProps) {
   return (
-    <div className={cn("flex items-center gap-3 cursor-pointer group", className)}>
+    <div className={cn("flex items-center gap-1.5 cursor-pointer group", className)}>
       <div className={cn(
         "relative flex items-center justify-center transition-all duration-300 group-hover:scale-105",
-        "w-10 h-10 rounded-lg overflow-hidden"
+        "w-9 h-9 overflow-hidden"
       )}>
         {/* The "R" shape with integrated arrow inspired by the reference image */}
         <svg 
