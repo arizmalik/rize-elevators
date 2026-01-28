@@ -10,34 +10,42 @@ export default function Logo({ className, scrolled, isFooter }: LogoProps) {
   return (
     <div className={cn("flex items-center gap-3 cursor-pointer group", className)}>
       <div className={cn(
-        "relative flex items-center justify-center transition-all duration-300 group-hover:scale-105",
-        isFooter ? "w-12 h-12 bg-primary rounded-xl shadow-lg shadow-primary/20" : "w-10 h-10 bg-primary rounded-lg shadow-md"
+        "relative flex items-center justify-center transition-all duration-300 group-hover:scale-105 overflow-hidden",
+        isFooter ? "w-12 h-12 bg-[#1e293b] rounded-xl shadow-lg shadow-primary/20" : "w-10 h-10 bg-[#1e293b] rounded-lg shadow-md"
       )}>
-        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-inherit" />
+        {/* The "R" shape with integrated arrow inspired by the reference image */}
         <svg 
-          viewBox="0 0 24 24" 
+          viewBox="0 0 100 100" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg" 
-          className={cn("text-white", isFooter ? "w-7 h-7" : "w-6 h-6")}
+          className={isFooter ? "w-10 h-10" : "w-8 h-8"}
         >
+          {/* Main Blue 'R' body */}
           <path 
-            d="M7 21V3H13.5C16.4822 3 18.9 5.41777 18.9 8.4C18.9 10.932 17.1522 13.0562 14.8015 13.627L19 21H15.5L11.75 13.8H10V21H7ZM10 11.2H13.5C15.0464 11.2 16.3 9.9464 16.3 8.4C16.3 6.8536 15.0464 5.6 13.5 5.6H10V11.2Z" 
-            fill="currentColor"
+            d="M20 10H65C80 10 90 22 90 35C90 48 80 60 65 60H50L85 90H65L35 60H20V90H10V10H20Z" 
+            fill="#1e293b" 
           />
+          
+          {/* White border/glow around the arrow cutout area */}
           <path 
-            d="M12 18L14 16L16 18" 
-            stroke="currentColor" 
-            strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-            className="animate-bounce"
+            d="M45 85L45 45L30 45L55 15L80 45L65 45L65 85H45Z" 
+            fill="white"
           />
+          
+          {/* Inner grey arrow from the image */}
           <path 
-            d="M14 16V21" 
-            stroke="currentColor" 
-            strokeWidth="2" 
-            strokeLinecap="round"
+            d="M50 80L50 48L38 48L55 25L72 48L60 48L60 80H50Z" 
+            fill="#94a3b8"
           />
+          
+          {/* Subtle gradient for depth */}
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="white" stopOpacity="0.1" />
+              <stop offset="100%" stopColor="transparent" />
+            </linearGradient>
+          </defs>
+          <rect width="100" height="100" fill="url(#logo-grad)" pointerEvents="none" />
         </svg>
       </div>
       <div className="flex flex-col leading-none">
