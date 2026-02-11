@@ -13,37 +13,47 @@ export default function Logo({ className, scrolled, isFooter }: LogoProps) {
         "relative flex items-center justify-center transition-all duration-300 group-hover:scale-105",
         "w-9 h-9 overflow-hidden"
       )}>
-        {/* The "R" shape with integrated arrow inspired by the reference image */}
+        {/* The "R" shape with integrated arrow inspired by the second reference image */}
         <svg 
           viewBox="0 0 100 100" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg" 
           className={isFooter ? "w-10 h-10" : "w-8 h-8"}
         >
-          {/* Main 'R' body */}
+          {/* Main 'R' body - Bold Navy Blue */}
           <path 
             d="M20 10H65C80 10 90 22 90 35C90 48 80 60 65 60H50L85 90H65L35 60H20V90H10V10H20Z" 
             fill={isFooter || !scrolled ? "white" : "currentColor"} 
-            className={cn(!isFooter && scrolled && "text-primary")}
+            className={cn(!isFooter && scrolled && "text-[#1e293b]")}
           />
           
-          {/* Transparent cutout/border area with flared/curved bottom for motion effect */}
+          {/* Transparent cutout/border area with clean sharp edges from second image */}
           <path 
-            d="M38 85C42 75 42 60 45 45L30 45C40 35 45 25 55 15C65 25 70 35 80 45L65 45C68 60 68 75 72 85H38Z" 
+            d="M38 85L45 45L30 45L55 15L80 45L65 45L72 85H38Z" 
             fill={isFooter || !scrolled ? "#0f172a" : "white"}
           />
           
-          {/* Inner arrow with outward bend at the bottom/foot for flared motion effect */}
+          {/* Inner arrow with subtle gradient and split line effect from the image */}
           <path 
-            d="M44 80C48 72 48 60 50 48L38 48C45 40 50 32 55 25C60 32 65 40 72 48L60 48C62 60 62 72 66 80H44Z" 
-            fill="#94a3b8"
+            d="M44 80L50 48L38 48L55 25L72 48L60 48L66 80H44Z" 
+            fill="url(#arrow-grad)"
           />
+          
+          {/* The subtle split line in the center of the arrow seen in the image */}
+          <line x1="55" y1="25" x2="55" y2="80" stroke="#000000" strokeOpacity="0.1" strokeWidth="0.5" />
+
+          <defs>
+            <linearGradient id="arrow-grad" x1="55" y1="25" x2="55" y2="80" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#d1d5db" />
+              <stop offset="100%" stopColor="#6b7280" />
+            </linearGradient>
+          </defs>
         </svg>
       </div>
       <div className="flex flex-col leading-none">
         <span className={cn(
           "font-black font-display tracking-tighter transition-colors duration-300",
-          isFooter ? "text-2xl text-white" : (scrolled ? "text-primary text-xl" : "text-white text-xl")
+          isFooter ? "text-2xl text-white" : (scrolled ? "text-[#1e293b] text-xl" : "text-white text-xl")
         )}>
           RIZE
         </span>
