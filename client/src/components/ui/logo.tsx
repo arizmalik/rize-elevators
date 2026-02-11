@@ -16,32 +16,31 @@ export default function Logo({ className, scrolled, isFooter }: LogoProps) {
         "relative flex items-center justify-center transition-all duration-300 group-hover:scale-105",
         "w-9 h-9 overflow-hidden"
       )}>
-        {/* The "R" shape with integrated arrow perfectly merged as per reference image */}
         <svg 
           viewBox="0 0 100 100" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg" 
           className={isFooter ? "w-10 h-10" : "w-8 h-8"}
         >
-          {/* Main 'R' body - Bold Navy Blue */}
+          {/* Main 'R' body */}
           <path 
             d="M20 10H65C80 10 90 22 90 35C90 48 80 60 65 60H50L85 90H65L35 60H20V90H10V10H20Z" 
             fill={mainColor} 
           />
           
-          {/* Transparent cutout/border area that creates the white 'stroke' look around the arrow */}
+          {/* Transparent cutout/border area with curved arrow head shoulders */}
           <path 
-            d="M38 90L45 45L30 45L55 15L80 45L65 45L72 90H38Z" 
+            d="M38 90L45 45C38 45 30 45 30 45C45 35 50 25 55 15C60 25 65 35 80 45C80 45 72 45 65 45L72 90H38Z" 
             fill={contrastColor}
           />
           
-          {/* Inner arrow that merges into the R shape */}
+          {/* Inner arrow with softened, curved shoulders and pointed wings */}
           <path 
-            d="M44 90L50 48L38 48L55 25L72 48L60 48L66 90H44Z" 
+            d="M44 90L50 48C44 48 38 48 38 48C48 40 52 32 55 25C58 32 62 40 72 48C72 48 66 48 60 48L66 90H44Z" 
             fill="url(#arrow-grad)"
           />
           
-          {/* The subtle split line effect from the image */}
+          {/* Split line effect */}
           <path d="M54.5 25L54.5 90H55.5V25H54.5Z" fill="black" fillOpacity="0.1" />
 
           <defs>
