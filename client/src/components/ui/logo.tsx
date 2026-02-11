@@ -7,13 +7,16 @@ interface LogoProps {
 }
 
 export default function Logo({ className, scrolled, isFooter }: LogoProps) {
+  const mainColor = isFooter || !scrolled ? "white" : "#1e293b";
+  const contrastColor = isFooter || !scrolled ? "#0f172a" : "white";
+
   return (
     <div className={cn("flex items-center gap-1.5 cursor-pointer group", className)}>
       <div className={cn(
         "relative flex items-center justify-center transition-all duration-300 group-hover:scale-105",
         "w-9 h-9 overflow-hidden"
       )}>
-        {/* The "R" shape with integrated arrow inspired by the second reference image */}
+        {/* The "R" shape with integrated arrow perfectly merged as per reference image */}
         <svg 
           viewBox="0 0 100 100" 
           fill="none" 
@@ -23,27 +26,26 @@ export default function Logo({ className, scrolled, isFooter }: LogoProps) {
           {/* Main 'R' body - Bold Navy Blue */}
           <path 
             d="M20 10H65C80 10 90 22 90 35C90 48 80 60 65 60H50L85 90H65L35 60H20V90H10V10H20Z" 
-            fill={isFooter || !scrolled ? "white" : "currentColor"} 
-            className={cn(!isFooter && scrolled && "text-[#1e293b]")}
+            fill={mainColor} 
           />
           
-          {/* Transparent cutout/border area with clean sharp edges from second image */}
+          {/* Transparent cutout/border area that creates the white 'stroke' look around the arrow */}
           <path 
-            d="M38 85L45 45L30 45L55 15L80 45L65 45L72 85H38Z" 
-            fill={isFooter || !scrolled ? "#0f172a" : "white"}
+            d="M38 90L45 45L30 45L55 15L80 45L65 45L72 90H38Z" 
+            fill={contrastColor}
           />
           
-          {/* Inner arrow with subtle gradient and split line effect from the image */}
+          {/* Inner arrow that merges into the R shape */}
           <path 
-            d="M44 80L50 48L38 48L55 25L72 48L60 48L66 80H44Z" 
+            d="M44 90L50 48L38 48L55 25L72 48L60 48L66 90H44Z" 
             fill="url(#arrow-grad)"
           />
           
-          {/* The subtle split line in the center of the arrow seen in the image */}
-          <line x1="55" y1="25" x2="55" y2="80" stroke="#000000" strokeOpacity="0.1" strokeWidth="0.5" />
+          {/* The subtle split line effect from the image */}
+          <path d="M54.5 25L54.5 90H55.5V25H54.5Z" fill="black" fillOpacity="0.1" />
 
           <defs>
-            <linearGradient id="arrow-grad" x1="55" y1="25" x2="55" y2="80" gradientUnits="userSpaceOnUse">
+            <linearGradient id="arrow-grad" x1="55" y1="25" x2="55" y2="90" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stopColor="#d1d5db" />
               <stop offset="100%" stopColor="#6b7280" />
             </linearGradient>
