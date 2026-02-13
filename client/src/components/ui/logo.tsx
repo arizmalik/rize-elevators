@@ -16,35 +16,36 @@ export default function Logo({ className, scrolled, isFooter }: LogoProps) {
         "relative flex items-center justify-center transition-all duration-300 group-hover:scale-105",
         "w-9 h-9 overflow-hidden"
       )}>
+        {/* The "R" shape with integrated arrow inspired by the reference image */}
         <svg 
           viewBox="0 0 100 100" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg" 
           className={isFooter ? "w-10 h-10" : "w-8 h-8"}
         >
-          {/* Main 'R' body */}
+          {/* Main 'R' body - Thickened left leg and refined geometry */}
           <path 
-            d="M20 10H65C80 10 90 22 90 35C90 48 80 60 65 60H50L85 90H65L35 60H20V90H10V10H20Z" 
+            d="M5 10H65C80 10 90 22 90 35C90 48 80 60 65 60H50L85 90H65L35 60H25V90H5V10Z" 
             fill={mainColor} 
           />
           
-          {/* Transparent cutout/border area with curved arrow head shoulders */}
+          {/* Transparent cutout/border area - centered better */}
           <path 
-            d="M38 90L45 45C38 45 30 45 30 45C45 35 50 25 55 15C60 25 65 35 80 45C80 45 72 45 65 45L72 90H38Z" 
+            d="M33 90L40 45L25 45L50 15L75 45L60 45L67 90H33Z" 
             fill={contrastColor}
           />
           
-          {/* Inner arrow with softened, curved shoulders and pointed wings */}
+          {/* Inner arrow - centered better */}
           <path 
-            d="M44 90L50 48C44 48 38 48 38 48C48 40 52 32 55 25C58 32 62 40 72 48C72 48 66 48 60 48L66 90H44Z" 
+            d="M39 90L45 48L33 48L50 25L67 48L55 48L61 90H39Z" 
             fill="url(#arrow-grad)"
           />
           
           {/* Split line effect */}
-          <path d="M54.5 25L54.5 90H55.5V25H54.5Z" fill="black" fillOpacity="0.1" />
+          <path d="M49.5 25L49.5 90H50.5V25H49.5Z" fill="black" fillOpacity="0.1" />
 
           <defs>
-            <linearGradient id="arrow-grad" x1="55" y1="25" x2="55" y2="90" gradientUnits="userSpaceOnUse">
+            <linearGradient id="arrow-grad" x1="50" y1="25" x2="50" y2="90" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stopColor="#d1d5db" />
               <stop offset="100%" stopColor="#6b7280" />
             </linearGradient>
