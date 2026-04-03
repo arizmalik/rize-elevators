@@ -22,34 +22,30 @@ export default function Logo({ className, scrolled, isFooter }: LogoProps) {
           xmlns="http://www.w3.org/2000/svg" 
           className={isFooter ? "w-10 h-10" : "w-8 h-8"}
         >
-          {/* Main 'R' body with thicker left leg and correct geometry */}
+          {/* Dark Blue R Background - perfectly matching the reference proportions */}
           <path 
-            d="M10 5 H65 C85 5 100 18 100 35 C100 52 95 65 85 65 L100 95 H72 L60 65 H32 V95 H10 V5 Z M32 25 V45 H60 C70 45 75 40 75 35 C75 30 70 25 60 25 H32 Z" 
+            d="M 28 28 H 65 C 85 28 85 38 85 48 C 85 58 80 62 68 62 L 85 85 H 65 L 50 62 L 45 62 V 85 H 28 Z M 45 42 V 50 H 65 C 70 50 70 42 65 42 Z" 
             fill={mainColor} 
-            fillRule="evenodd"
+            fillRule="evenodd" 
           />
           
-          {/* White cutout area forming the 'path' for the arrow, centered at x=55 */}
+          {/* White Cutout Area for Arrow - high triangle tip, wide base */}
           <path 
-            d="M35 100 L55 25 L75 100 Z" 
-            fill={contrastColor}
+            d="M 46 22 L 32 45 H 38 L 33 85 H 59 L 54 45 H 60 Z" 
+            fill={contrastColor} 
           />
           
-          {/* Inner grey arrow perfectly centered */}
+          {/* Left Side of Arrow - Light Grey */}
           <path 
-            d="M42 95 L55 35 L68 95 Z" 
-            fill="url(#arrow-grad)"
+            d="M 46 28 L 36 42 H 40 L 35 85 H 45.5 Z" 
+            fill="#cbd5e1" 
           />
           
-          {/* Vertical split line in the center of the arrow */}
-          <path d="M54.5 35 V95 H55.5 V35 Z" fill="black" fillOpacity="0.15" />
-
-          <defs>
-            <linearGradient id="arrow-grad" x1="55" y1="35" x2="55" y2="95" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#e5e7eb" />
-              <stop offset="100%" stopColor="#9ca3af" />
-            </linearGradient>
-          </defs>
+          {/* Right Side of Arrow - Dark Grey */}
+          <path 
+            d="M 46 28 L 56 42 H 52 L 57 85 H 46.5 Z" 
+            fill="#64748b" 
+          />
         </svg>
       </div>
       <div className="flex flex-col leading-none">
