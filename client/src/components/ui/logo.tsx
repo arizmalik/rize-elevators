@@ -22,31 +22,32 @@ export default function Logo({ className, scrolled, isFooter }: LogoProps) {
           xmlns="http://www.w3.org/2000/svg" 
           className={isFooter ? "w-10 h-10" : "w-8 h-8"}
         >
-          {/* Main 'R' body - Refined geometry for the 'R' inspired by the vector */}
+          {/* Main 'R' body with thicker left leg and correct geometry */}
           <path 
-            d="M10 10H65C82 10 92 22 92 38C92 54 82 66 65 66H45L80 90H60L30 66H25V90H10V10Z" 
+            d="M10 5 H65 C85 5 100 18 100 35 C100 52 95 65 85 65 L100 95 H72 L60 65 H32 V95 H10 V5 Z M32 25 V45 H60 C70 45 75 40 75 35 C75 30 70 25 60 25 H32 Z" 
             fill={mainColor} 
+            fillRule="evenodd"
           />
           
-          {/* White cutout area forming the 'path' for the arrow */}
+          {/* White cutout area forming the 'path' for the arrow, centered at x=55 */}
           <path 
-            d="M38 90L45 45L30 45L55 15L80 45L65 45L72 90H38Z" 
+            d="M35 100 L55 25 L75 100 Z" 
             fill={contrastColor}
           />
           
-          {/* Inner grey arrow with subtle flared bottom and split effect */}
+          {/* Inner grey arrow perfectly centered */}
           <path 
-            d="M44 90L50 48L38 48L55 25L72 48L60 48L66 90H44Z" 
+            d="M42 95 L55 35 L68 95 Z" 
             fill="url(#arrow-grad)"
           />
           
           {/* Vertical split line in the center of the arrow */}
-          <path d="M54.5 25V90H55.5V25H54.5Z" fill="black" fillOpacity="0.1" />
+          <path d="M54.5 35 V95 H55.5 V35 Z" fill="black" fillOpacity="0.15" />
 
           <defs>
-            <linearGradient id="arrow-grad" x1="55" y1="25" x2="55" y2="90" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#d1d5db" />
-              <stop offset="100%" stopColor="#6b7280" />
+            <linearGradient id="arrow-grad" x1="55" y1="35" x2="55" y2="95" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#e5e7eb" />
+              <stop offset="100%" stopColor="#9ca3af" />
             </linearGradient>
           </defs>
         </svg>
