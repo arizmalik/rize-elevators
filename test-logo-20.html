@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body style="background: #e2e8f0; display: flex; gap: 20px; padding: 50px;">
+
+<!-- Larger and perfectly centered arrow -->
+<svg viewBox="0 0 100 100" width="400" height="400" style="background: white; outline: 1px solid #ccc;">
+  <!-- Dark Blue R Background -->
+  <!-- 
+    To perfectly center the arrow inside the whole letter R:
+    Let's make the R block symmetric around x=50.
+    Left leg = x=20 to x=80 (huge solid block). 
+    Actually, let's look at the provided image again. 
+    The left vertical leg is massive. The arrow is cut out exactly in the middle of this massive left leg.
+    The right side of the R (the loop and the right leg) extend further to the right.
+  -->
+  <path d="M 15 15 H 65 C 90 15 95 30 95 45 C 95 60 85 70 70 70 L 95 100 H 70 L 55 70 H 50 V 100 H 15 Z M 50 35 V 50 H 70 C 75 50 75 35 70 35 Z" fill="#1e3a5f" fill-rule="evenodd" />
+  
+  <!-- Arrow perfectly centered at x=50. 
+       This will be centered in the R overall, or close to it. 
+  -->
+  <path d="M 50 0 L 25 45 H 35 L 25 100 H 75 L 65 45 H 75 Z" fill="white" />
+  
+  <path d="M 50 10 L 32 40 H 40 L 32 100 H 49.5 Z" fill="#cbd5e1" />
+  <path d="M 50 10 L 68 40 H 60 L 68 100 H 50.5 Z" fill="#64748b" />
+</svg>
+
+</body>
+</html>

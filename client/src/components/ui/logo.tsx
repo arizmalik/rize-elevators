@@ -22,30 +22,34 @@ export default function Logo({ className, scrolled, isFooter }: LogoProps) {
           xmlns="http://www.w3.org/2000/svg" 
           className={isFooter ? "w-10 h-10" : "w-8 h-8"}
         >
-          {/* Dark Blue R Background - perfectly matching the reference proportions */}
+          {/* Main 'R' body - Centered and widened for the larger arrow */}
           <path 
-            d="M 28 28 H 65 C 85 28 85 38 85 48 C 85 58 80 62 68 62 L 85 85 H 65 L 50 62 L 45 62 V 85 H 28 Z M 45 42 V 50 H 65 C 70 50 70 42 65 42 Z" 
+            d="M 10 15 H 75 C 100 15 100 35 100 50 C 100 65 90 70 70 70 L 90 100 H 65 L 45 70 H 40 V 100 H 10 Z M 40 35 V 50 H 75 C 85 50 85 35 75 35 Z" 
             fill={mainColor} 
             fillRule="evenodd" 
           />
           
-          {/* White Cutout Area for Arrow - high triangle tip, wide base */}
+          {/* White Cutout Area for Arrow - Large, perfectly centered at x=50 */}
           <path 
-            d="M 46 22 L 32 45 H 38 L 33 85 H 59 L 54 45 H 60 Z" 
+            d="M 50 0 L 15 45 H 30 L 15 100 H 85 L 70 45 H 85 Z" 
             fill={contrastColor} 
           />
           
-          {/* Left Side of Arrow - Light Grey */}
+          {/* Inner grey arrow - perfectly centered and scaled up */}
           <path 
-            d="M 46 28 L 36 42 H 40 L 35 85 H 45.5 Z" 
-            fill="#cbd5e1" 
+            d="M 50 8 L 22 42 H 34 L 22 100 H 78 L 66 42 H 78 Z" 
+            fill="url(#arrow-grad)" 
           />
           
-          {/* Right Side of Arrow - Dark Grey */}
-          <path 
-            d="M 46 28 L 56 42 H 52 L 57 85 H 46.5 Z" 
-            fill="#64748b" 
-          />
+          {/* Vertical split line in the center of the arrow */}
+          <path d="M 49.5 8 V 100 H 50.5 V 8 Z" fill="black" fillOpacity="0.15" />
+
+          <defs>
+            <linearGradient id="arrow-grad" x1="50" y1="8" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#e5e7eb" />
+              <stop offset="100%" stopColor="#9ca3af" />
+            </linearGradient>
+          </defs>
         </svg>
       </div>
       <div className="flex flex-col leading-none">

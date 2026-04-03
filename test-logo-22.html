@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body style="background: #e2e8f0; display: flex; gap: 20px; padding: 50px;">
+
+<svg viewBox="0 0 100 100" width="400" height="400" style="background: white; outline: 1px solid #ccc;">
+  <!-- Dark Blue R -->
+  <!-- The arrow is centered in the WHOLE letter R in the image.
+       Let's center it exactly at 50, and make the R perfectly symmetrical around 50 for the left block.
+       Actually, the right side of the R (the loop) makes the overall shape wider on the right.
+       But the arrow is positioned exactly in the visual center of the *entire* logo mark.
+       Let's make the R bounding box x=10 to x=90.
+       Center is x=50.
+  -->
+  <path d="M 10 10 H 70 C 95 10 95 30 95 45 C 95 60 85 65 70 65 L 90 95 H 65 L 50 65 H 45 V 95 H 10 Z M 45 35 V 50 H 70 C 80 50 80 35 70 35 Z" fill="#1e3a5f" fill-rule="evenodd" />
+  
+  <!-- Arrow centered at 50 -->
+  <path d="M 50 0 L 20 45 H 32 L 20 100 H 80 L 68 45 H 80 Z" fill="white" />
+  
+  <path d="M 50 12 L 30 40 H 38 L 30 100 H 49.5 Z" fill="#cbd5e1" />
+  <path d="M 50 12 L 70 40 H 62 L 70 100 H 50.5 Z" fill="#64748b" />
+</svg>
+
+</body>
+</html>

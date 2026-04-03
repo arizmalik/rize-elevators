@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body style="background: #e2e8f0; display: flex; gap: 20px; padding: 50px;">
+
+<svg viewBox="-5 -5 110 110" width="400" height="400" style="background: white; outline: 1px solid #ccc;">
+  <!-- We want the arrow perfectly centered in the R block. 
+       Let's place the arrow at x=50.
+       To have it centered, the R block needs to be symmetric from x=0 to x=100.
+       Let's create the R block:
+       Left edge: 10
+       Right edge: 90
+       Center: 50
+  -->
+  <path d="M 10 10 H 75 C 100 10 100 35 100 50 C 100 65 90 70 70 70 L 90 100 H 65 L 45 70 H 40 V 100 H 10 Z M 40 35 V 50 H 75 C 85 50 85 35 75 35 Z" fill="#1e3a5f" fill-rule="evenodd" />
+  
+  <!-- Now the arrow perfectly centered at 50, stretching taller than the R -->
+  <path d="M 50 -5 L 15 50 H 30 L 15 105 H 85 L 70 50 H 85 Z" fill="white" />
+  
+  <path d="M 50 5 L 23 45 H 35 L 23 100 H 49.5 Z" fill="#cbd5e1" />
+  <path d="M 50 5 L 77 45 H 65 L 77 100 H 50.5 Z" fill="#64748b" />
+</svg>
+
+</body>
+</html>
