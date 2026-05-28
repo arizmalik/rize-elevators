@@ -7,55 +7,43 @@ interface LogoProps {
 }
 
 export default function Logo({ className, scrolled, isFooter }: LogoProps) {
-  const mainColor = isFooter || !scrolled ? "white" : "#1e293b";
-  const contrastColor = isFooter || !scrolled ? "#0f172a" : "white";
-
   return (
     <div className={cn("flex items-center gap-1.5 cursor-pointer group", className)}>
       <div className={cn(
         "relative flex items-center justify-center transition-all duration-300 group-hover:scale-105",
         "w-9 h-9 overflow-hidden"
       )}>
+        {/* The "R" shape with integrated arrow inspired by the reference image */}
         <svg 
           viewBox="0 0 100 100" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg" 
           className={isFooter ? "w-10 h-10" : "w-8 h-8"}
         >
-          {/* Main 'R' body - Centered and widened for the larger arrow */}
+          {/* Main 'R' body - using Primary Blue or White depending on context */}
           <path 
-            d="M 10 15 H 75 C 100 15 100 35 100 50 C 100 65 90 70 70 70 L 90 100 H 65 L 45 70 H 40 V 100 H 10 Z M 40 35 V 50 H 75 C 85 50 85 35 75 35 Z" 
-            fill={mainColor} 
-            fillRule="evenodd" 
+            d="M20 10H65C80 10 90 22 90 35C90 48 80 60 65 60H50L85 90H65L35 60H20V90H10V10H20Z" 
+            fill={isFooter || !scrolled ? "white" : "currentColor"} 
+            className={cn(!isFooter && scrolled && "text-primary")}
           />
           
-          {/* White Cutout Area for Arrow - Large, perfectly centered at x=50 */}
+          {/* Transparent cutout/border area */}
           <path 
-            d="M 50 0 L 15 45 H 30 L 15 100 H 85 L 70 45 H 85 Z" 
-            fill={contrastColor} 
+            d="M45 85L45 45L30 45L55 15L80 45L65 45L65 85H45Z" 
+            fill={isFooter || !scrolled ? "#0f172a" : "white"}
           />
           
-          {/* Inner grey arrow - perfectly centered and scaled up */}
+          {/* Inner arrow */}
           <path 
-            d="M 50 8 L 22 42 H 34 L 22 100 H 78 L 66 42 H 78 Z" 
-            fill="url(#arrow-grad)" 
+            d="M50 80L50 48L38 48L55 25L72 48L60 48L60 80H50Z" 
+            fill="#94a3b8"
           />
-          
-          {/* Vertical split line in the center of the arrow */}
-          <path d="M 49.5 8 V 100 H 50.5 V 8 Z" fill="black" fillOpacity="0.15" />
-
-          <defs>
-            <linearGradient id="arrow-grad" x1="50" y1="8" x2="50" y2="100" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#e5e7eb" />
-              <stop offset="100%" stopColor="#9ca3af" />
-            </linearGradient>
-          </defs>
         </svg>
       </div>
       <div className="flex flex-col leading-none">
         <span className={cn(
           "font-black font-display tracking-tighter transition-colors duration-300",
-          isFooter ? "text-2xl text-white" : (scrolled ? "text-[#1e293b] text-xl" : "text-white text-xl")
+          isFooter ? "text-2xl text-white" : (scrolled ? "text-primary text-xl" : "text-white text-xl")
         )}>
           RIZE
         </span>
