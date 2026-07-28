@@ -61,7 +61,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Head Office</h4>
-                    <p className="text-muted-foreground">123 Business Park, Tech City,<br />Mumbai, Maharashtra 400001</p>
+                    <p className="text-muted-foreground">88/367 Humayun Bagh Chaman Ganj Road,<br />Kanpur 208001</p>
                   </div>
                 </div>
 

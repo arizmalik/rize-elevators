@@ -127,7 +127,7 @@ export default function Footer() {
                 <div className="bg-slate-900 p-2.5 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                   <MapPin className="h-5 w-5 shrink-0" />
                 </div>
-                <span className="text-slate-400 text-sm pt-0.5">123 Business Park, Tech City,<br />Mumbai, India 400001</span>
+                <span className="text-slate-400 text-sm pt-0.5">88/367 Humayun Bagh Chaman Ganj Road,<br />Kanpur 208001</span>
               </li>
               <li className="flex items-center gap-4 group">
                 <div className="bg-slate-900 p-2.5 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors">
