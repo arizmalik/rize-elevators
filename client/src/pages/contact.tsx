@@ -82,8 +82,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Email</h4>
-                    <p className="text-muted-foreground">info@rizeelevators.com</p>
-                    <p className="text-muted-foreground">support@rizeelevators.com</p>
+                    <p className="text-muted-foreground">rize.elevator@gmail.com</p>
                   </div>
                 </div>
               </div>

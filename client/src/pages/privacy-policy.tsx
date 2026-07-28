@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
 
             <section>
               <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">5. Your Rights</h2>
-              <p>You have the right to request access to the personal information we hold about you and to ask for corrections or deletion of your data. Please contact us at info@rizeelevators.com for such requests.</p>
+              <p>You have the right to request access to the personal information we hold about you and to ask for corrections or deletion of your data. Please contact us at rize.elevator@gmail.com for such requests.</p>
             </section>
           </div>
         </motion.div>
