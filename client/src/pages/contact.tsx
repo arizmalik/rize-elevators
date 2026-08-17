@@ -15,7 +15,8 @@ const formSchema = z.object({
   email: z.string().email("Invalid email address"),
   phone: z.string().min(10, "Phone number is required"),
   serviceType: z.string().min(1, "Please select a service"),
-  message: z.string().min(10, "Please tell us more about your requirements"),
+  // message: z.string().min(10, "Please tell us more about your requirements"),
+  message: z.string().optional(),
 });
 
 export default function Contact() {
@@ -191,7 +192,7 @@ ${values.message}`;
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>Message (Optional)</FormLabel>
                       <FormControl>
                         <Textarea 
                           placeholder="Tell us about your project requirements..." 
