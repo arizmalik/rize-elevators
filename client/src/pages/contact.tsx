@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -30,14 +31,28 @@ export default function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Request Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    form.reset();
-  }
+function onSubmit(values: z.infer<typeof formSchema>) {
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+
+  const message = `Hello Rize Elevators,
+
+*New Contact Request*
+
+*Name:* ${values.name}
+*Phone:* ${values.phone}
+*Email:* ${values.email}
+*Service:* ${values.serviceType}
+
+*Message:*
+${values.message}`;
+
+  const whatsappUrl =
+    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappUrl, "_blank");
+
+  form.reset();
+}
 
   return (
     <div className="pt-24 pb-16">
