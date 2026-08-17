@@ -7,6 +7,7 @@ import luxBuilding1 from "@assets/generated_images/modern_8-story_luxury_apartme
 import boutiqueHotel from "@assets/generated_images/modern_indian_4-story_boutique_hotel_architecture.png";
 import corporateOffice from "@assets/generated_images/sleek_7-story_indian_corporate_office_building.png";
 import educationalInst from "@assets/generated_images/contemporary_5-story_indian_educational_institution_building.png";
+// import testModule
 
 export default function Projects() {
   const projects = [
